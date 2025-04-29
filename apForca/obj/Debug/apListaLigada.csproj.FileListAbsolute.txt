@@ -1,0 +1,57 @@
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\exemplos\Listas\apListaLigada\bin\Debug\apListaLigada.exe.config
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\exemplos\Listas\apListaLigada\bin\Debug\apListaLigada.exe
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\exemplos\Listas\apListaLigada\bin\Debug\apListaLigada.pdb
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\exemplos\Listas\apListaLigada\obj\Debug\apListaLigada.csproj.AssemblyReference.cache
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\exemplos\Listas\apListaLigada\obj\Debug\apListaLigada.FrmAlunos.resources
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\exemplos\Listas\apListaLigada\obj\Debug\apListaLigada.Properties.Resources.resources
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\exemplos\Listas\apListaLigada\obj\Debug\apListaLigada.csproj.GenerateResource.cache
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\exemplos\Listas\apListaLigada\obj\Debug\apListaLigada.csproj.CoreCompileInputs.cache
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\exemplos\Listas\apListaLigada\obj\Debug\apListaLigada.exe
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\exemplos\Listas\apListaLigada\obj\Debug\apListaLigada.pdb
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada\obj\Debug\apListaLigada.csproj.AssemblyReference.cache
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada\obj\Debug\apListaLigada.FrmAlunos.resources
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada\obj\Debug\apListaLigada.Properties.Resources.resources
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada\obj\Debug\apListaLigada.csproj.GenerateResource.cache
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada\obj\Debug\apListaLigada.csproj.CoreCompileInputs.cache
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada\obj\Debug\apListaLigada.exe
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada\obj\Debug\apListaLigada.pdb
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada\bin\Debug\apListaLigada.exe.config
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada\bin\Debug\apListaLigada.exe
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada\bin\Debug\apListaLigada.pdb
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada1_a_4\bin\Debug\apListaLigada.exe.config
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada1_a_4\bin\Debug\apListaLigada.exe
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada1_a_4\bin\Debug\apListaLigada.pdb
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.csproj.AssemblyReference.cache
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.FrmAlunos.resources
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.Properties.Resources.resources
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.csproj.GenerateResource.cache
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.csproj.CoreCompileInputs.cache
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.exe
+P:\19-Informática\2024\2oAno\TI221 - Estruturas de Dados\1o semestre\correcoes\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.pdb
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\correções\listas\apListaLigada1_a_4\bin\Debug\apListaLigada.exe.config
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\correções\listas\apListaLigada1_a_4\bin\Debug\apListaLigada.exe
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\correções\listas\apListaLigada1_a_4\bin\Debug\apListaLigada.pdb
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\correções\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.csproj.AssemblyReference.cache
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\correções\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.FrmAlunos.resources
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\correções\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.Properties.Resources.resources
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\correções\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.csproj.GenerateResource.cache
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\correções\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.csproj.CoreCompileInputs.cache
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\correções\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.exe
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\correções\listas\apListaLigada1_a_4\obj\Debug\apListaLigada.pdb
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Ligadas\apListaLigada1_a_4\bin\Debug\apListaLigada.exe.config
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Ligadas\apListaLigada1_a_4\bin\Debug\apListaLigada.exe
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Ligadas\apListaLigada1_a_4\bin\Debug\apListaLigada.pdb
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.csproj.AssemblyReference.cache
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.FrmAlunos.resources
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.Properties.Resources.resources
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.csproj.GenerateResource.cache
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.csproj.CoreCompileInputs.cache
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.exe
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.pdb
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Duplamente Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.csproj.AssemblyReference.cache
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Duplamente Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.FrmAlunos.resources
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Duplamente Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.Properties.Resources.resources
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Duplamente Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.csproj.GenerateResource.cache
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Duplamente Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.csproj.CoreCompileInputs.cache
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Duplamente Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.exe
+P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Duplamente Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.pdb
