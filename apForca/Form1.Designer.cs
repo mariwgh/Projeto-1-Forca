@@ -84,6 +84,7 @@
             this.txtRA.Name = "txtRA";
             this.txtRA.Size = new System.Drawing.Size(207, 24);
             this.txtRA.TabIndex = 3;
+            this.txtRA.TextChanged += new System.EventHandler(this.txtRA_TextChanged);
             // 
             // txtNome
             // 

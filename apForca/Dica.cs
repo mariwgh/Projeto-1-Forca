@@ -23,5 +23,13 @@ namespace apListaLigada
         {
             throw new NotImplementedException();
         }
+        //oq q tem q fazer aqui?
+
+        public string DicaPalavra { get; set; }
+
+        public Dica(string sla)
+        {
+            DicaPalavra = sla;
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using apListaLigada;
 
 public enum Direcao { paraFrente, paraTras };
 
@@ -303,4 +304,13 @@ public class ListaDupla<Dado>
     arquivo.Close();
   }
 
+    internal void InserirEmOrdem(Dica dica)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void InserirEmOrdem(Palavra palavra)
+    {
+        throw new NotImplementedException();
+    }
 }

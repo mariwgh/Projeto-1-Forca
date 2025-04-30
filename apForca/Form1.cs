@@ -11,7 +11,7 @@ namespace apListaLigada
 
     public FrmAlunos()
     {
-        InitializeComponent();
+            InitializeComponent();
     }
 
     private void btnLerArquivo1_Click(object sender, EventArgs e)
@@ -23,8 +23,8 @@ namespace apListaLigada
     {
             // instanciar a lista de palavras e dicas
             //QUE?????????????????
-            ListaDupla<Aluno> palavras;
-            ListaDupla<Aluno> dicas;
+            ListaDupla<Palavra> listaPalavra = new ListaDupla<Palavra>();
+            ListaDupla<Dica> listaDica = new ListaDupla<Dica>();
             // pedir ao usuário o nome do arquivo de entrada
             string caminho = null;
             OpenFileDialog ofd = new OpenFileDialog();
@@ -39,15 +39,35 @@ namespace apListaLigada
             while (linha != null)
             {
                 linha = leitor.ReadLine();
-                
+                Palavra palavra = new Palavra(linha);
+                //criar uma especie de for p percorrer a palavra até acabar e guardar letra por letra?
+                Dica dica = new Dica(linha);
+
+                listaPalavra.InserirAposFim(palavra);
+                listaDica.InserirAposFim(dica);
             }
             // para cada linha, criar um objeto da classe de Palavra e Dica
-            // e inseri-0lo no final da lista duplamente ligada
+            // e inseri-lo no final da lista duplamente ligada
         }
 
     private void btnIncluir_Click(object sender, EventArgs e)
     {
       // se o usuário digitou palavra e dica:
+        if (txtNome.Text != null && txtRA.Text != null)       //nome = dica e ra = palavra
+        {
+                Palavra palavra = new Palavra(txtRA.Text);
+                Dica dica = new Dica(txtNome.Text);
+                try
+                {
+                    lista1.InserirEmOrdem(dica);
+                    lista1.InserirEmOrdem(palavra);
+                }
+                catch (Exception ex) {
+                    throw new Exception(ex.Message);
+                    //ou
+                    //throw new Exception("A palavra ja existe");
+                }
+        }
       // criar objeto da classe Palavra e Dica para busca
       // tentar incluir em ordem esse objeto na lista1
       // se não incluiu (já existe) avisar o usuário
@@ -152,5 +172,10 @@ namespace apListaLigada
     {
 
     }
-  }
+
+        private void txtRA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
