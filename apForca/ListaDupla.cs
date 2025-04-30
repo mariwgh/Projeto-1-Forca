@@ -247,7 +247,7 @@ public class ListaDupla<Dado>
   private void InserirNoMeio(Dado dados)
   {
     // Existe() encontrou intervalo de inclusão do novo nó (entre anterior e atual)
-
+    NoDuplo<Dado> anterior = null;
     var novo = new NoDuplo<Dado>(dados);
     anterior.Prox = novo;   // liga anterior ao novo
     novo.Prox = atual;      // e novo no atual
@@ -259,6 +259,7 @@ public class ListaDupla<Dado>
 
   public bool Remover(Dado dadoARemover)
   {
+    NoDuplo<Dado> anterior = null;
     if (EstaVazia)
       return false;
 

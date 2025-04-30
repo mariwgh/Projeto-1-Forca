@@ -55,3 +55,13 @@ P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Dupla
 P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Duplamente Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.csproj.CoreCompileInputs.cache
 P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Duplamente Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.exe
 P:\19-Informática\2025\2o Ano\TI221 - Estruturas de Dados\exemplos\Listas Duplamente Ligadas\apListaLigada1_a_4\obj\Debug\apListaLigada.pdb
+C:\Users\USER\Documents\GitHub\Projeto-1-Forca\apForca\bin\Debug\apListaLigada.exe.config
+C:\Users\USER\Documents\GitHub\Projeto-1-Forca\apForca\bin\Debug\apListaLigada.exe
+C:\Users\USER\Documents\GitHub\Projeto-1-Forca\apForca\bin\Debug\apListaLigada.pdb
+C:\Users\USER\Documents\GitHub\Projeto-1-Forca\apForca\obj\Debug\apListaLigada.csproj.AssemblyReference.cache
+C:\Users\USER\Documents\GitHub\Projeto-1-Forca\apForca\obj\Debug\apListaLigada.FrmAlunos.resources
+C:\Users\USER\Documents\GitHub\Projeto-1-Forca\apForca\obj\Debug\apListaLigada.Properties.Resources.resources
+C:\Users\USER\Documents\GitHub\Projeto-1-Forca\apForca\obj\Debug\apListaLigada.csproj.GenerateResource.cache
+C:\Users\USER\Documents\GitHub\Projeto-1-Forca\apForca\obj\Debug\apListaLigada.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\GitHub\Projeto-1-Forca\apForca\obj\Debug\apListaLigada.exe
+C:\Users\USER\Documents\GitHub\Projeto-1-Forca\apForca\obj\Debug\apListaLigada.pdb

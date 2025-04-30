@@ -11,7 +11,7 @@ namespace apListaLigada
 
     public FrmAlunos()
     {
-      InitializeComponent();
+        InitializeComponent();
     }
 
     private void btnLerArquivo1_Click(object sender, EventArgs e)
@@ -21,12 +21,29 @@ namespace apListaLigada
 
     private void FazerLeitura(ref ListaDupla<Aluno> qualLista)
     {
-      // instanciar a lista de palavras e dicas
-      // pedir ao usuário o nome do arquivo de entrada
-      // abrir esse arquivo e lê-lo linha a linha
-      // para cada linha, criar um objeto da classe de Palavra e Dica
-      // e inseri-0lo no final da lista duplamente ligada
-    }
+            // instanciar a lista de palavras e dicas
+            //QUE?????????????????
+            ListaDupla<Aluno> palavras;
+            ListaDupla<Aluno> dicas;
+            // pedir ao usuário o nome do arquivo de entrada
+            string caminho = null;
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Selecione um arquivo:";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                caminho = ofd.FileName;
+            }
+            // abrir esse arquivo e lê-lo linha a linha
+            string linha = "1";
+            StreamReader leitor = new StreamReader(caminho);
+            while (linha != null)
+            {
+                linha = leitor.ReadLine();
+                
+            }
+            // para cada linha, criar um objeto da classe de Palavra e Dica
+            // e inseri-0lo no final da lista duplamente ligada
+        }
 
     private void btnIncluir_Click(object sender, EventArgs e)
     {
