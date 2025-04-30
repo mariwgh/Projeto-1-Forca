@@ -15,25 +15,44 @@ public class ListaDupla<Dado>
   bool primeiroAcessoDoPercurso;
   int numeroDoNoAtual;    // "índice" do nó apontado por atual
 
+
   public void PosicionarNoInicio()
   {
-    //  codificar
-  }
+        //  codificar
+
+        atual = primeiro;
+        numeroDoNoAtual = 0;
+    }
 
   public void PosicionarNoFinal()
   {
-    //  codificar
-  }
+        //  codificar
+
+        atual = ultimo;
+        numeroDoNoAtual = quantosNos - 1;
+    }
 
   public void Avancar()
   {
-    //  codificar
-  }
+        //  codificar
+
+        if (atual != ultimo)
+        {
+            atual = atual.Prox;
+            numeroDoNoAtual++;
+        }
+    }
 
   public void Retroceder()
   {
-    //  codificar
-  }
+        //  codificar
+
+        if (atual != primeiro)
+        {
+            atual = atual.Ant;
+            numeroDoNoAtual--;
+        }
+    }
 
   public void PosicionarEm(int indice)
   {
@@ -45,6 +64,7 @@ public class ListaDupla<Dado>
     //    percorre "indice" nós com o ponteiro atual sequencial
     //      atualiza a variável numeroDoNoAtual
   }
+
 
   public Dado this[int indice]
   {

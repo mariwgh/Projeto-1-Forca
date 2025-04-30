@@ -27,9 +27,9 @@ namespace apListaLigada
 
         public string DicaPalavra { get; set; }
 
-        public Dica(string sla)
+        public Dica(string dica)
         {
-            DicaPalavra = sla;
+            DicaPalavra = dica;
         }
     }
 }
