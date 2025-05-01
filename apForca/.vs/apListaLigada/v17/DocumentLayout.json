@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\dica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|solutionrelative:dica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\listadupla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|solutionrelative:listadupla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\listadupla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|solutionrelative:listadupla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\dica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|solutionrelative:dica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|solutionrelative:aluno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2BFB39FF-63A8-4EBA-BED7-CA5A08AA9F55}|apListaLigada.csproj|C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\palavra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -48,13 +48,14 @@
               "RelativeDocumentMoniker": "Palavra.cs",
               "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\Palavra.cs",
               "RelativeToolTip": "Palavra.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCAAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wCAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T01:10:17.085Z"
+              "WhenOpened": "2025-04-30T01:10:17.085Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Dica.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\Dica.cs",
               "RelativeDocumentMoniker": "Dica.cs",
@@ -62,11 +63,12 @@
               "RelativeToolTip": "Dica.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T01:10:00.805Z"
+              "WhenOpened": "2025-04-30T01:10:00.805Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -74,23 +76,25 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAUwA4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T12:39:59.81Z"
+              "WhenOpened": "2025-04-29T12:39:59.81Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ListaDupla.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\ListaDupla.cs",
               "RelativeDocumentMoniker": "ListaDupla.cs",
               "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\ListaDupla.cs",
               "RelativeToolTip": "ListaDupla.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUBAAADAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAwCIAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T13:07:56.46Z"
+              "WhenOpened": "2025-03-12T13:07:56.46Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -102,15 +106,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Aluno.cs",
               "DocumentMoniker": "C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\Aluno.cs",
               "RelativeDocumentMoniker": "Aluno.cs",
               "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\Aluno.cs",
               "RelativeToolTip": "Aluno.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T01:06:55.585Z"
+              "WhenOpened": "2025-04-30T01:06:55.585Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -120,7 +125,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\USER\\Documents\\GitHub\\Projeto-1-Forca\\apForca\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAkwFAAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAOAAAAAAAAAAAAAowIMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-12T13:07:56.216Z",
               "EditorCaption": ""

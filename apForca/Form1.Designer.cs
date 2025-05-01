@@ -30,8 +30,8 @@
     {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAlunos));
             this.label2 = new System.Windows.Forms.Label();
-            this.txtRA = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtPalavra = new System.Windows.Forms.TextBox();
+            this.txtDica = new System.Windows.Forms.TextBox();
             this.dlgAbrir = new System.Windows.Forms.OpenFileDialog();
             this.dlgSalvar = new System.Windows.Forms.SaveFileDialog();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -77,21 +77,21 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Dica:";
             // 
-            // txtRA
+            // txtPalavra
             // 
-            this.txtRA.Location = new System.Drawing.Point(79, 18);
-            this.txtRA.MaxLength = 30;
-            this.txtRA.Name = "txtRA";
-            this.txtRA.Size = new System.Drawing.Size(207, 24);
-            this.txtRA.TabIndex = 3;
-            this.txtRA.TextChanged += new System.EventHandler(this.txtRA_TextChanged);
+            this.txtPalavra.Location = new System.Drawing.Point(79, 18);
+            this.txtPalavra.MaxLength = 30;
+            this.txtPalavra.Name = "txtPalavra";
+            this.txtPalavra.Size = new System.Drawing.Size(207, 24);
+            this.txtPalavra.TabIndex = 3;
+            this.txtPalavra.TextChanged += new System.EventHandler(this.txtPalavra_TextChanged);
             // 
-            // txtNome
+            // txtDica
             // 
-            this.txtNome.Location = new System.Drawing.Point(79, 48);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(524, 24);
-            this.txtNome.TabIndex = 4;
+            this.txtDica.Location = new System.Drawing.Point(79, 48);
+            this.txtDica.Name = "txtDica";
+            this.txtDica.Size = new System.Drawing.Size(524, 24);
+            this.txtDica.TabIndex = 4;
             // 
             // dlgAbrir
             // 
@@ -259,8 +259,8 @@
             // 
             this.tpCadastro.Controls.Add(this.label1);
             this.tpCadastro.Controls.Add(this.label2);
-            this.tpCadastro.Controls.Add(this.txtRA);
-            this.tpCadastro.Controls.Add(this.txtNome);
+            this.tpCadastro.Controls.Add(this.txtPalavra);
+            this.tpCadastro.Controls.Add(this.txtDica);
             this.tpCadastro.Location = new System.Drawing.Point(4, 26);
             this.tpCadastro.Name = "tpCadastro";
             this.tpCadastro.Padding = new System.Windows.Forms.Padding(3);
@@ -396,8 +396,8 @@
 
     #endregion
     private System.Windows.Forms.Label label2;
-    private System.Windows.Forms.TextBox txtRA;
-    private System.Windows.Forms.TextBox txtNome;
+    private System.Windows.Forms.TextBox txtPalavra;
+    private System.Windows.Forms.TextBox txtDica;
     private System.Windows.Forms.OpenFileDialog dlgAbrir;
     private System.Windows.Forms.SaveFileDialog dlgSalvar;
     private System.Windows.Forms.ToolStrip toolStrip1;

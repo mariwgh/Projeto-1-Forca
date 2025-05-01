@@ -201,34 +201,37 @@ public class ListaDupla<Dado>
     bool achou = false;
     bool fim = false;
 
-    //	repete os comandos abaixo enquanto não achou o RA nem chegou ao
-    //	final da pesquisa
-    while (!achou && !fim)
-      // se o apontador atual vale null, indica final físico da lista
-      if (atual == null)
-         fim = true;
-      // se não chegou ao final da lista, verifica o valor da chave atual
-      else
-        // verifica igualdade entre chave procurada e chave do nó atual
-        if (outroProcurado.CompareTo(atual.Info) == 0)
-           achou = true;
-        else
+        //	repete os comandos abaixo enquanto não achou o RA nem chegou ao
+        //	final da pesquisa
+        while (!achou && !fim)
+            // se o apontador atual vale null, indica final físico da lista
+            if (atual == null)
+                fim = true;
+            // se não chegou ao final da lista, verifica o valor da chave atual
+            else
+              // verifica igualdade entre chave procurada e chave do nó atual
+              if (outroProcurado.CompareTo(atual.Info) == 0)
+            {
+                numeroDoNoAtual = Convert.ToInt32(atual);   //?? 
+                achou = true;
+            }
+            else
           // se chave atual é maior que a procurada, significa que
           // a chave procurada não existe na lista ordenada e, assim,
           // termina a pesquisa indicando que não achou. Anterior
           // aponta o nó anterior ao atual, que foi acessado na
           // última repetição
           if (atual.Info.CompareTo(outroProcurado) > 0)
-             fim = true;
-          else
-          {
-            // se não achou a chave procurada nem uma chave > que ela,
-            // então a pesquisa continua, de maneira que o apontador
-            // anterior deve apontar o nó atual e o apontador atual
-            // deve seguir para o nó seguinte
-        //    anterior = atual;
-            atual = atual.Prox;
-          }
+                fim = true;
+            else
+            {
+                // se não achou a chave procurada nem uma chave > que ela,
+                // então a pesquisa continua, de maneira que o apontador
+                // anterior deve apontar o nó atual e o apontador atual
+                // deve seguir para o nó seguinte
+                //    anterior = atual;
+                atual = atual.Prox;
+            }
 
     // por fim, caso a pesquisa tenha terminado, o apontador atual
     // aponta o nó onde está a chave procurada, caso ela tenha sido
@@ -238,7 +241,7 @@ public class ListaDupla<Dado>
     return achou;   // devolve o valor da variável achou, que indica
   }
 
-  public NoDuplo<Dado> Atual => atual;
+  public NoDuplo<Dado> Atual { get; set; }      //eu deveria ter mudado isso, marietti? estava só get
 
   public int NumeroDoNoAtual { get => numeroDoNoAtual; set => numeroDoNoAtual = value; }
 
