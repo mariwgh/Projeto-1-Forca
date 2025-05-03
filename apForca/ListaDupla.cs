@@ -59,10 +59,23 @@ public class ListaDupla<Dado>
     // fica para vocês fazerem
 
     // verificar se indice é válido ( >= 0 && < quantosNos)
-    // se for valido:
-    //    atual aponta o primeiro nó;
-    //    percorre "indice" nós com o ponteiro atual sequencial
-    //      atualiza a variável numeroDoNoAtual
+        if (indice >= 0 && indice < quantosNos)
+        {
+            // se for valido:
+            //    atual aponta o primeiro nó;
+            atual = primeiro;
+            //    percorre "indice" nós com o ponteiro atual sequencial
+            while (atual != null) // enquanto houver nós a visitar
+            {
+                if (indice == atual)
+                {
+                    numeroDoNoAtual = atual;    // atualiza a variável numeroDoNoAtual
+                }
+                
+                atual = atual.Prox;         // avança o ponteiro de percurso para o nó seguinte
+            }
+        }
+    }
   }
 
 
