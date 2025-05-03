@@ -65,15 +65,15 @@ public class ListaDupla<Dado>
             //    atual aponta o primeiro nó;
             atual = primeiro;
             //    percorre "indice" nós com o ponteiro atual sequencial
-            while (atual != null) // enquanto houver nós a visitar
+            int i = 0;
+
+            while (i < indice)
             {
-                if (indice == atual)
-                {
-                    numeroDoNoAtual = atual;    // atualiza a variável numeroDoNoAtual
-                }
-                
                 atual = atual.Prox;         // avança o ponteiro de percurso para o nó seguinte
-            }
+                i++;
+            } 
+            
+            numeroDoNoAtual = indice;    // atualiza a variável numeroDoNoAtual
         }
     }
   }
