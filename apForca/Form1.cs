@@ -232,6 +232,15 @@ namespace apListaLigada
         private void btnEditar_Click(object sender, EventArgs e)
         {
             // alterar a dica e guardar seu novo valor no nó exibido
+            if (!lista1.EstaVazia)
+            {
+                var registroAtual = lista1[lista1.NumeroDoNoAtual];
+
+                if (registroAtual != null)
+                {
+                    registroAtual.Dica = txtDica.Text;
+                }
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)
