@@ -8,7 +8,7 @@ namespace apListaLigada
 {
     public partial class FrmAlunos : Form
     {
-        ListaDupla<Aluno> lista1;
+        ListaDupla<PalavraDica> lista1;
 
         string caminho = null;
 
@@ -23,7 +23,7 @@ namespace apListaLigada
 
         }
 
-        private void FazerLeitura(ref ListaDupla<Aluno> qualLista)
+        private void FazerLeitura(ref ListaDupla<PalavraDica> qualLista)
         {
             // instanciar a lista de palavras e dicas
             ListaDupla<PalavraDica> listaPalavraDica = new ListaDupla<PalavraDica>();
@@ -80,63 +80,67 @@ namespace apListaLigada
             // se a palavra digitada não é vazia:
             if (txtPalavra.Text != "")
             {
-                Palavra objPalavra = new Palavra(txtPalavra.Text);
-                Dica objDica = new Dica(txtDica.Text);
-                Aluno word = new Aluno(txtPalavra.Text);
-                if (lista1.Existe(word))
+                // criar um objeto da classe de Palavra e Dica para busca
+                PalavraDica palavraDica = new PalavraDica(txtPalavra.Text, "-");
+
+                // se a palavra existe na lista1, posicionar o ponteiro atual nesse nó e exibir o registro atual
+                if (lista1.Existe(palavraDica))
                 {
                     lista1.PosicionarEm(lista1.NumeroDoNoAtual);
                     ExibirRegistroAtual();
                 }
+                
+                // senão, avisar usuário que a palavra não existe
                 else
                 {
-                    MessageBox.Show("A palavra não existe na lista.");
+                    MessageBox.Show("A palavra não existe.");
                 }
-                ExibirRegistroAtual();  //registro ou nó??? que???? não entendi
+
+                // exibir o nó atual
+                ExibirRegistroAtual();
             }
-            // criar um objeto da classe de Palavra e Dica para busca
-            // se a palavra existe na lista1, posicionar o ponteiro atual nesse nó e exibir o registro atual
-            // senão, avisar usuário que a palavra não existe
-            // exibir o nó atual
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             // para o nó atualmente visitado e exibido na tela:
+            NoDuplo<PalavraDica> noAtual = lista1.Atual;
+
             // perguntar ao usuário se realmente deseja excluir essa palavra e dica
+            DialogResult resposta = MessageBox.Show($"Deseja realmente excluir a palavra '{noAtual.Info.Palavra}'?",
+                "Confirmação",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
             // se sim, remover o nó atual da lista duplamente ligada e exibir o próximo nó
-            // se não, manter como está
-            if (txtPalavra.Text != "")
+            if (resposta == DialogResult.Yes)
             {
-                if (lista1.Remover(new Aluno(txtPalavra.Text, "-", 0)))
-                {
-                    MessageBox.Show("Aluno(a) removido(a).");
-                    ExibirRegistroAtual();
-                }
-                else
-                    MessageBox.Show("Aluno(a) não encontrado(a).");
+                lista1.Remover(noAtual.Info);
             }
+            
+            // se não, manter como está
         }
 
         private void FrmAlunos_FormClosing(object sender, FormClosingEventArgs e)
         {
-            string caminhoSaida = null;
             // solicitar ao usuário que escolha o arquivo de saída
+            string caminhoSaida = null;
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Selecione um arquivo de saída:";
+            openFileDialog.Title = "Selecione um arquivo de saída: ";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 caminhoSaida = openFileDialog.FileName;
             }
+
             // percorrer a lista ligada e gravar seus dados no arquivo de saída
-            StreamWriter escritor = new StreamWriter(caminhoSaida);
-            Aluno dadoAtual = lista1.Atual.Info;
+            PalavraDica dadoAtual = lista1.Atual.Info;
             while (dadoAtual != null)
             {
-                escritor.WriteLine(dadoAtual.ToString());
+                lista1.GravarDados(caminhoSaida);
                 lista1.Avancar();
             }
-
         }
 
         private void ExibirDados(ListaDupla<Aluno> aLista, ListBox lsb, Direcao qualDirecao)
@@ -154,28 +158,22 @@ namespace apListaLigada
 
         private void rbFrente_Click(object sender, EventArgs e)
         {
-            ExibirDados(lista1, lsbDados, Direcao.paraFrente);
+            //ExibirDados(lista1, lsbDados, Direcao.paraFrente);
         }
 
         private void rbTras_Click(object sender, EventArgs e)
         {
-            ExibirDados(lista1, lsbDados, Direcao.paraTras);
+            //ExibirDados(lista1, lsbDados, Direcao.paraTras);
         }
 
         private void FrmAlunos_Load(object sender, EventArgs e)
         {
             // fazer a leitura do arquivo escolhido pelo usuário e armazená-lo na lista1
-            StreamReader sr = new StreamReader(caminho);
-            string linha = "";
-            while (linha != null)
-            {
-                linha = sr.ReadLine();
-                Aluno objAluno = new Aluno(linha);
-                lista1.InserirAntesDoInicio(objAluno);      //pode ser outro inserir, marietti?? bjs te amo
-            }
+            FazerLeitura(ref lista1);
 
             // posicionar o ponteiro atual no início da lista duplamente ligada
             lista1.PosicionarNoInicio();
+
             // Exibir o Registro Atual;
             ExibirRegistroAtual();
         }
@@ -184,6 +182,7 @@ namespace apListaLigada
         {
             // posicionar o ponteiro atual no início da lista duplamente ligada
             lista1.PosicionarNoInicio();
+
             // Exibir o Registro Atual;
             ExibirRegistroAtual();
         }
@@ -192,6 +191,7 @@ namespace apListaLigada
         {
             // Retroceder o ponteiro atual para o nó imediatamente anterior 
             lista1.Retroceder();
+
             // Exibir o Registro Atual;
             ExibirRegistroAtual();
         }
@@ -200,7 +200,7 @@ namespace apListaLigada
         {
             // Retroceder o ponteiro atual para o nó seguinte 
             lista1.Avancar();
-            //ou lista1.Retroceder(); ????????????????????
+           
             // Exibir o Registro Atual;
             ExibirRegistroAtual();
         }
@@ -208,7 +208,8 @@ namespace apListaLigada
         private void btnFim_Click(object sender, EventArgs e)
         {
             // posicionar o ponteiro atual no último nó da lista 
-            lista1.Atual = lista1.Ultimo;
+            lista1.PosicionarNoFinal();
+
             // Exibir o Registro Atual;
             ExibirRegistroAtual();
         }
@@ -216,14 +217,14 @@ namespace apListaLigada
         private void ExibirRegistroAtual()
         {
             // se a lista não está vazia:
-            // acessar o nó atual e exibir seus campos em txtDica e txtPalavra
-            // atualizar no status bar o número do registro atual / quantos nós na lista
             if (!lista1.EstaVazia)
             {
-                var alunoAtual = lista1[lista1.NumeroDoNoAtual];
-                txtRA.Text = alunoAtual.RA;
-                txtNome.Text = alunoAtual.Nome;
-                udNota.Value = (decimal)alunoAtual.Nota;
+                // acessar o nó atual e exibir seus campos em txtDica e txtPalavra
+                var noAtual = lista1[lista1.NumeroDoNoAtual];
+                txtPalavra.Text = noAtual.Palavra;
+                txtDica.Text = noAtual.Dica;
+
+                // atualizar no status bar o número do registro atual / quantos nós na lista
                 slRegistro.Text = $"Registro: {lista1.NumeroDoNoAtual + 1}/{lista1.QuantosNos}";
             }
         }
