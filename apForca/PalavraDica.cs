@@ -42,7 +42,7 @@ namespace apListaLigada
             {
                 throw new Exception("30 caracteres atingidos.");
             }
-                
+
             Palavra = palavra;
             Dica = dica;
         }
@@ -52,7 +52,7 @@ namespace apListaLigada
             Palavra = linhaDeDados.Substring(0, 30);
             Dica = linhaDeDados.Substring(30).Trim();
         }
-        
+
 
         public int CompareTo(PalavraDica other)
         {

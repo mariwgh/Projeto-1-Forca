@@ -66,7 +66,7 @@ namespace apListaLigada
                 {
                     lista1.InserirEmOrdem(palavraDica);
                 }
-                
+
                 // se não incluiu (já existe) avisar o usuário
                 catch
                 {
@@ -89,7 +89,7 @@ namespace apListaLigada
                     lista1.PosicionarEm(lista1.NumeroDoNoAtual);
                     ExibirRegistroAtual();
                 }
-                
+
                 // senão, avisar usuário que a palavra não existe
                 else
                 {
@@ -118,7 +118,7 @@ namespace apListaLigada
             {
                 lista1.Remover(noAtual.Info);
             }
-            
+
             // se não, manter como está
         }
 
@@ -200,7 +200,7 @@ namespace apListaLigada
         {
             // Retroceder o ponteiro atual para o nó seguinte 
             lista1.Avancar();
-           
+
             // Exibir o Registro Atual;
             ExibirRegistroAtual();
         }
