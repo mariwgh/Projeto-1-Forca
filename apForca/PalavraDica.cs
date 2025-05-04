@@ -21,7 +21,7 @@ namespace apListaLigada
                 if (value != "")
                     palavra = value.PadRight(tamanhoMaximo, ' ').Substring(0, tamanhoMaximo);
                 else
-                    throw new Exception("Palavra vazio é inválido.");
+                    throw new Exception("Palavra vazia é inválido.");
             }
         }
         public string Dica
@@ -32,7 +32,7 @@ namespace apListaLigada
                 if (value != "")
                     dica = value;
                 else
-                    throw new Exception("Palavra vazio é inválido.");
+                    throw new Exception("Dica vazia é inválido.");
             }
         }
 
@@ -49,8 +49,16 @@ namespace apListaLigada
 
         public PalavraDica(string linhaDeDados)
         {
-            Palavra = linhaDeDados.Substring(0, 30);
-            Dica = linhaDeDados.Substring(30).Trim();
+            Palavra = linhaDeDados.PadRight(tamanhoMaximo, ' ').Substring(0, tamanhoMaximo);
+            
+            if (linhaDeDados.Length > tamanhoMaximo)
+            {
+                Dica = linhaDeDados.Substring(tamanhoMaximo).Trim();
+            }
+            else
+            {
+                Dica = "";
+            }
         }
 
 

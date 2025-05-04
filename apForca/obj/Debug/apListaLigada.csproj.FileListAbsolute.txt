@@ -72,3 +72,6 @@ C:\Users\ADM\Documents\GitHub\Projeto-1-Forca\apForca\obj\Debug\apListaLigada.cs
 C:\Users\ADM\Documents\GitHub\Projeto-1-Forca\apForca\obj\Debug\apListaLigada.csproj.CoreCompileInputs.cache
 C:\Users\ADM\Documents\GitHub\Projeto-1-Forca\apForca\obj\Debug\apListaLigada.exe
 C:\Users\ADM\Documents\GitHub\Projeto-1-Forca\apForca\obj\Debug\apListaLigada.pdb
+C:\Users\ADM\Documents\GitHub\Projeto-1-Forca\apForca\bin\Debug\apListaLigada.exe.config
+C:\Users\ADM\Documents\GitHub\Projeto-1-Forca\apForca\bin\Debug\apListaLigada.exe
+C:\Users\ADM\Documents\GitHub\Projeto-1-Forca\apForca\bin\Debug\apListaLigada.pdb

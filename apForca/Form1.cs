@@ -104,19 +104,22 @@ namespace apListaLigada
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             // para o nó atualmente visitado e exibido na tela:
-            NoDuplo<PalavraDica> noAtual = lista1.Atual;
-
-            // perguntar ao usuário se realmente deseja excluir essa palavra e dica
-            DialogResult resposta = MessageBox.Show($"Deseja realmente excluir a palavra '{noAtual.Info.Palavra}'?",
-                "Confirmação",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question
-            );
-
-            // se sim, remover o nó atual da lista duplamente ligada e exibir o próximo nó
-            if (resposta == DialogResult.Yes)
+            if (lista1.Atual != null)
             {
-                lista1.Remover(noAtual.Info);
+                NoDuplo<PalavraDica> noAtual = lista1.Atual;
+
+                // perguntar ao usuário se realmente deseja excluir essa palavra e dica
+                DialogResult resposta = MessageBox.Show($"Deseja realmente excluir a palavra '{noAtual.Info.Palavra}'?",
+                    "Confirmação",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                // se sim, remover o nó atual da lista duplamente ligada e exibir o próximo nó
+                if (resposta == DialogResult.Yes)
+                {
+                    lista1.Remover(noAtual.Info);
+                }
             }
 
             // se não, manter como está
