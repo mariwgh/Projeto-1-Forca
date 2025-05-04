@@ -93,19 +93,19 @@ namespace apListaLigada
                 // se a palavra existe na lista1, posicionar o ponteiro atual nesse nó e exibir o registro atual
                 if (lista1.Existe(palavraDica))
                 {
-                    NoDuplo<PalavraDica> aux = lista1.Primeiro;
+                    NoDuplo<PalavraDica> aux = lista1.Primeiro;         // ponteiro auxiliar para percorrer a lista que comeca com o primeiro no
                     int indiceBuscado = 0;
 
                     while (aux != null)
                     {
-                        if (aux.Info.Palavra == palavraDica.Palavra)
+                        if (aux.Info.Palavra == palavraDica.Palavra)    // se achou, posiciona no indice que foi calculado
                         {
                             lista1.PosicionarEm(indiceBuscado);
                             break;
                         }
                         else
                         {
-                            aux = aux.Prox;
+                            aux = aux.Prox;                             // avança para o próximo nó
                             indiceBuscado++;
                         }
                     }

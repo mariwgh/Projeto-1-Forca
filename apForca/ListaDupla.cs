@@ -68,6 +68,7 @@ public class ListaDupla<Dado>
             // se for valido:
             //    atual aponta o primeiro nó;
             atual = primeiro;
+
             //    percorre "indice" nós com o ponteiro atual sequencial
             int i = 0;
 
