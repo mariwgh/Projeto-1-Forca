@@ -26,9 +26,7 @@ namespace apListaLigada
         private void FazerLeitura(ref ListaDupla<Aluno> qualLista)
         {
             // instanciar a lista de palavras e dicas
-            //QUE?????????????????
-            ListaDupla<Palavra> listaPalavra = new ListaDupla<Palavra>();
-            ListaDupla<Dica> listaDica = new ListaDupla<Dica>();
+            ListaDupla<PalavraDica> listaPalavraDica = new ListaDupla<PalavraDica>();
 
             // pedir ao usuário o nome do arquivo de entrada
             OpenFileDialog ofd = new OpenFileDialog();
@@ -39,46 +37,43 @@ namespace apListaLigada
             }
 
             // abrir esse arquivo e lê-lo linha a linha
-            string linha = "1";
-            StreamReader leitor = new StreamReader(caminho);
-            while (linha != null)
+            string linha = "";
+            StreamReader arquivo = new StreamReader(caminho);
+            while (!arquivo.EndOfStream)
             {
-                linha = leitor.ReadLine();
-                Palavra palavra = new Palavra(linha);
-                //criar uma especie de for p percorrer a palavra até acabar e guardar letra por letra?
-                Dica dica = new Dica(linha);
+                linha = arquivo.ReadLine();
 
-                listaPalavra.InserirAposFim(palavra);
-                listaDica.InserirAposFim(dica);
+                // para cada linha, criar um objeto da classe de Palavra e Dica
+                PalavraDica palavraDica = new PalavraDica(linha);
+
+                // e inseri-lo no final da lista duplamente ligada
+                listaPalavraDica.InserirAposFim(palavraDica);
             }
-            // para cada linha, criar um objeto da classe de Palavra e Dica
-            // e inseri-lo no final da lista duplamente ligada
+
+            arquivo.Close();
         }
 
         private void btnIncluir_Click(object sender, EventArgs e)
         {
             // se o usuário digitou palavra e dica:
-            if (txtDica.Text != null && txtPalavra.Text != null)       //nome = dica e ra = palavra
+            if (txtPalavra.Text != "" && txtDica.Text != "")
             {
-                Palavra palavra = new Palavra(txtPalavra.Text);
-                Dica dica = new Dica(txtDica.Text);
+                // criar objeto da classe Palavra e Dica para busca
+                PalavraDica palavraDica = new PalavraDica(txtPalavra.Text, txtDica.Text);
+
+                // tentar incluir em ordem esse objeto na lista1
                 try
                 {
-                    lista1.InserirEmOrdem(dica);
-                    lista1.InserirEmOrdem(palavra);
+                    lista1.InserirEmOrdem(palavraDica);
                 }
-                catch (Exception ex)
+                
+                // se não incluiu (já existe) avisar o usuário
+                catch
                 {
-                    throw new Exception(ex.Message);
-                    //ou
-                    //throw new Exception("A palavra ja existe");
+                    MessageBox.Show("Já existe.");
                 }
             }
-            // criar objeto da classe Palavra e Dica para busca
-            // tentar incluir em ordem esse objeto na lista1
-            // se não incluiu (já existe) avisar o usuário
         }
-
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -223,6 +218,14 @@ namespace apListaLigada
             // se a lista não está vazia:
             // acessar o nó atual e exibir seus campos em txtDica e txtPalavra
             // atualizar no status bar o número do registro atual / quantos nós na lista
+            if (!lista1.EstaVazia)
+            {
+                var alunoAtual = lista1[lista1.NumeroDoNoAtual];
+                txtRA.Text = alunoAtual.RA;
+                txtNome.Text = alunoAtual.Nome;
+                udNota.Value = (decimal)alunoAtual.Nota;
+                slRegistro.Text = $"Registro: {lista1.NumeroDoNoAtual + 1}/{lista1.QuantosNos}";
+            }
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
