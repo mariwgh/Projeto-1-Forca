@@ -29,7 +29,7 @@ namespace apListaLigada
             get => dica;
             set
             {
-                if (value != "")
+                if (value != null)
                     dica = value;
                 else
                     throw new Exception("Dica vazia é inválido.");

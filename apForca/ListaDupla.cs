@@ -36,7 +36,7 @@ public class ListaDupla<Dado>
     {
         //  codificar
 
-        if (atual != ultimo)
+        if (atual != null && atual != ultimo)
         {
             atual = atual.Prox;
             numeroDoNoAtual++;
@@ -223,17 +223,14 @@ public class ListaDupla<Dado>
             else
               // verifica igualdade entre chave procurada e chave do nó atual
               if (outroProcurado.CompareTo(atual.Info) == 0)
-            {
-                numeroDoNoAtual = Convert.ToInt32(atual);   //?? 
                 achou = true;
-            }
             else
-          // se chave atual é maior que a procurada, significa que
-          // a chave procurada não existe na lista ordenada e, assim,
-          // termina a pesquisa indicando que não achou. Anterior
-          // aponta o nó anterior ao atual, que foi acessado na
-          // última repetição
-          if (atual.Info.CompareTo(outroProcurado) > 0)
+                // se chave atual é maior que a procurada, significa que
+                // a chave procurada não existe na lista ordenada e, assim,
+                // termina a pesquisa indicando que não achou. Anterior
+                // aponta o nó anterior ao atual, que foi acessado na
+                // última repetição
+                if (atual.Info.CompareTo(outroProcurado) > 0)
                 fim = true;
             else
             {
@@ -282,8 +279,8 @@ public class ListaDupla<Dado>
 
     private void InserirNoMeio(Dado dados)
     {
-        // Existe() encontrou intervalo de inclusão do novo nó (entre anterior e atual)
         NoDuplo<Dado> anterior = atual.Ant;
+        // Existe() encontrou intervalo de inclusão do novo nó (entre anterior e atual)
 
         var novo = new NoDuplo<Dado>(dados);
         anterior.Prox = novo;   // liga anterior ao novo
@@ -296,7 +293,8 @@ public class ListaDupla<Dado>
 
     public bool Remover(Dado dadoARemover)
     {
-        NoDuplo<Dado> anterior = null;
+        NoDuplo<Dado> anterior = atual.Ant;
+
         if (EstaVazia)
             return false;
 
@@ -339,4 +337,5 @@ public class ListaDupla<Dado>
         }
         arquivo.Close();
     }
+
 }

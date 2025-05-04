@@ -50,6 +50,8 @@ namespace apListaLigada
                 listaPalavraDica.InserirAposFim(palavraDica);
             }
 
+            qualLista = listaPalavraDica;
+
             arquivo.Close();
         }
 
@@ -65,6 +67,7 @@ namespace apListaLigada
                 try
                 {
                     lista1.InserirEmOrdem(palavraDica);
+                    MessageBox.Show("Palavra inserida!");
                 }
 
                 // se não incluiu (já existe) avisar o usuário
@@ -86,7 +89,23 @@ namespace apListaLigada
                 // se a palavra existe na lista1, posicionar o ponteiro atual nesse nó e exibir o registro atual
                 if (lista1.Existe(palavraDica))
                 {
-                    lista1.PosicionarEm(lista1.NumeroDoNoAtual);
+                    NoDuplo<PalavraDica> aux = lista1.Primeiro;
+                    int indiceBuscado = 0;
+
+                    while (aux != null)
+                    {
+                        if (aux.Info.Palavra == palavraDica.Palavra)
+                        {
+                            lista1.PosicionarEm(indiceBuscado);
+                            break;
+                        }
+                        else
+                        {
+                            aux = aux.Prox;
+                            indiceBuscado++;
+                        }
+                    }
+                    
                     ExibirRegistroAtual();
                 }
 
@@ -97,19 +116,17 @@ namespace apListaLigada
                 }
 
                 // exibir o nó atual
-                ExibirRegistroAtual();
+                // ExibirRegistroAtual();
             }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             // para o nó atualmente visitado e exibido na tela:
-            if (lista1.Atual != null)
+            if (txtPalavra.Text != "")
             {
-                NoDuplo<PalavraDica> noAtual = lista1.Atual;
-
                 // perguntar ao usuário se realmente deseja excluir essa palavra e dica
-                DialogResult resposta = MessageBox.Show($"Deseja realmente excluir a palavra '{noAtual.Info.Palavra}'?",
+                DialogResult resposta = MessageBox.Show($"Deseja realmente excluir a palavra '{lista1.Atual.Info.Palavra.Trim()}'?",
                     "Confirmação",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question
@@ -118,7 +135,10 @@ namespace apListaLigada
                 // se sim, remover o nó atual da lista duplamente ligada e exibir o próximo nó
                 if (resposta == DialogResult.Yes)
                 {
-                    lista1.Remover(noAtual.Info);
+                    lista1.Remover(new PalavraDica(txtPalavra.Text, "-"));
+                    MessageBox.Show("Excluído!");
+                    
+                    ExibirRegistroAtual();
                 }
             }
 
@@ -138,8 +158,7 @@ namespace apListaLigada
             }
 
             // percorrer a lista ligada e gravar seus dados no arquivo de saída
-            PalavraDica dadoAtual = lista1.Atual.Info;
-            while (dadoAtual != null)
+            while (lista1.Atual != null)
             {
                 lista1.GravarDados(caminhoSaida);
                 lista1.Avancar();
@@ -242,6 +261,7 @@ namespace apListaLigada
                 if (registroAtual != null)
                 {
                     registroAtual.Dica = txtDica.Text;
+                    MessageBox.Show("Dica alterada!");
                 }
             }
         }
