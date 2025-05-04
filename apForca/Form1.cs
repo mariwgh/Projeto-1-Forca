@@ -29,14 +29,15 @@ namespace apListaLigada
             //QUE?????????????????
             ListaDupla<Palavra> listaPalavra = new ListaDupla<Palavra>();
             ListaDupla<Dica> listaDica = new ListaDupla<Dica>();
-            // pedir ao usuário o nome do arquivo de entrada
 
+            // pedir ao usuário o nome do arquivo de entrada
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Title = "Selecione um arquivo:";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 caminho = ofd.FileName;
             }
+
             // abrir esse arquivo e lê-lo linha a linha
             string linha = "1";
             StreamReader leitor = new StreamReader(caminho);
@@ -110,6 +111,16 @@ namespace apListaLigada
             // perguntar ao usuário se realmente deseja excluir essa palavra e dica
             // se sim, remover o nó atual da lista duplamente ligada e exibir o próximo nó
             // se não, manter como está
+            if (txtPalavra.Text != "")
+            {
+                if (lista1.Remover(new Aluno(txtPalavra.Text, "-", 0)))
+                {
+                    MessageBox.Show("Aluno(a) removido(a).");
+                    ExibirRegistroAtual();
+                }
+                else
+                    MessageBox.Show("Aluno(a) não encontrado(a).");
+            }
         }
 
         private void FrmAlunos_FormClosing(object sender, FormClosingEventArgs e)
