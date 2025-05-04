@@ -5,35 +5,35 @@ using apListaLigada;
 
 public enum Direcao { paraFrente, paraTras };
 
-public class ListaDupla<Dado> 
+public class ListaDupla<Dado>
              where Dado : IComparable<Dado>, IRegistro
 {
-  NoDuplo<Dado> primeiro, ultimo, 
-                atual;   // é usado para percorrer a lista e mostrar
-                         // o nó que está sendo visitado a cada momento
-  int quantosNos;
-  bool primeiroAcessoDoPercurso;
-  int numeroDoNoAtual;    // "índice" do nó apontado por atual
+    NoDuplo<Dado> primeiro, ultimo,
+                  atual;   // é usado para percorrer a lista e mostrar
+                           // o nó que está sendo visitado a cada momento
+    int quantosNos;
+    bool primeiroAcessoDoPercurso;
+    int numeroDoNoAtual;    // "índice" do nó apontado por atual
 
 
-  public void PosicionarNoInicio()
-  {
+    public void PosicionarNoInicio()
+    {
         //  codificar
 
         atual = primeiro;
         numeroDoNoAtual = 0;
     }
 
-  public void PosicionarNoFinal()
-  {
+    public void PosicionarNoFinal()
+    {
         //  codificar
 
         atual = ultimo;
         numeroDoNoAtual = quantosNos - 1;
     }
 
-  public void Avancar()
-  {
+    public void Avancar()
+    {
         //  codificar
 
         if (atual != ultimo)
@@ -43,8 +43,8 @@ public class ListaDupla<Dado>
         }
     }
 
-  public void Retroceder()
-  {
+    public void Retroceder()
+    {
         //  codificar
 
         if (atual != primeiro)
@@ -54,11 +54,11 @@ public class ListaDupla<Dado>
         }
     }
 
-  public void PosicionarEm(int indice)
-  {
-    // fica para vocês fazerem
+    public void PosicionarEm(int indice)
+    {
+        // fica para vocês fazerem
 
-    // verificar se indice é válido ( >= 0 && < quantosNos)
+        // verificar se indice é válido ( >= 0 && < quantosNos)
         if (indice >= 0 && indice < quantosNos)
         {
             // se for valido:
@@ -71,148 +71,147 @@ public class ListaDupla<Dado>
             {
                 atual = atual.Prox;         // avança o ponteiro de percurso para o nó seguinte
                 i++;
-            } 
-            
+            }
+
             numeroDoNoAtual = indice;    // atualiza a variável numeroDoNoAtual
         }
     }
-  }
 
 
-  public Dado this[int indice]
-  {
-    get
+    public Dado this[int indice]
     {
-      PosicionarEm(indice);
-      return atual.Info;
-    }
-    set
-    {
-      PosicionarEm(indice);
-      atual.Info = value;
-    }
-  }
-
-  public List<Dado> Listagem(Direcao qualDirecao)
-  {
-    var dados = new List<Dado>();
-    if (qualDirecao == Direcao.paraFrente)
-    {
-      atual = primeiro;     // posiciona ponteiro de percurso no 1o nó
-      while (atual != null) // enquanto houver nós a visitar
-      {
-        dados.Add(atual.Info);  // inclui no listbox os dados do nó visitado agora
-        atual = atual.Prox;     // avança o ponteiro de percurso para o nó seguinte
-      }
-    }
-    else
-    {
-      atual = ultimo;       // posiciona ponteiro de percurso no último nó
-      while (atual != null) // enquanto houver nós a visitar
-      {
-        dados.Add(atual.Info);  // inclui no listbox os dados do nó visitado agora
-        atual = atual.Ant;      // retrocede o ponteiro de percurso para o nó anterior
-      }
-    }
-    return dados;
-  }
-
-  public ListaDupla()
-  {
-    primeiro = ultimo = atual = null;
-    quantosNos = numeroDoNoAtual = 0;
-    primeiroAcessoDoPercurso = false;
-  }
-
-  public bool EstaVazia
-  {
-    get => primeiro == null;
-  }
-  public NoDuplo<Dado> Primeiro
-  {
-    get => primeiro;
-  }
-  public NoDuplo<Dado> Ultimo
-  {
-    get => ultimo;
-  }
-  public int QuantosNos
-  {
-    get => quantosNos;
-  }
-
-  public void InserirAntesDoInicio(Dado novoDado)
-  {
-    var novoNo = new NoDuplo<Dado>(novoDado);
-
-    if (EstaVazia)
-       ultimo = novoNo;
-
-    novoNo.Prox = primeiro;
-    primeiro    = novoNo;
-    quantosNos++;
-  }
-
-  public void InserirAposFim(Dado novoDado)
-  {
-    var novoNo = new NoDuplo<Dado>(novoDado);
-
-    if (EstaVazia)
-      primeiro = novoNo;
-    else
-      ultimo.Prox = novoNo;
-
-    ultimo = novoNo;
-    quantosNos++;
-  }
-
-  public void InserirAposFim(NoDuplo<Dado> noExistente)
-  {
-    if (noExistente != null)
-    {
-      if (EstaVazia)
-        primeiro = noExistente;
-      else
-        ultimo.Prox = noExistente;
-
-      ultimo = noExistente;
-      noExistente.Prox = null;
-      quantosNos++;
-    }
-  }
-
-  public bool Existe(Dado outroProcurado)
-  {
-    //anterior = null;
-    atual = primeiro;
-
-    //	Em seguida, é verificado se a lista está vazia. Caso esteja, é
-    //	retornado false ao local de chamada, indicando que a chave não foi
-    //	encontrada, e atual e anterior ficam valendo null
-    if (EstaVazia)
-       return false;
- 
-    // a lista não está vazia, possui nós
-    // dado procurado é menor que o primeiro dado da lista:
-    // portanto, dado procurado não existe
-    if (outroProcurado.CompareTo(primeiro.Info) < 0)
-       return false;
-
-    // dado procurado é maior que o último dado da lista:
-    // portanto, dado procurado não existe
-    if (outroProcurado.CompareTo(ultimo.Info) > 0)
-    {
-      // anterior = ultimo;
-      atual = null;
-      return false;
+        get
+        {
+            PosicionarEm(indice);
+            return atual.Info;
+        }
+        set
+        {
+            PosicionarEm(indice);
+            atual.Info = value;
+        }
     }
 
-    //	caso não tenha sido definido que a chave está fora dos limites de 
-    //	chaves da lista, vamos procurar no seu interior
-    //	o apontador atual indica o primeiro nó da lista e consideraremos que
-    //	ainda não achou a chave procurada nem chegamos ao final da lista
-    bool achou = false;
-    bool fim = false;
+    public List<Dado> Listagem(Direcao qualDirecao)
+    {
+        var dados = new List<Dado>();
+        if (qualDirecao == Direcao.paraFrente)
+        {
+            atual = primeiro;     // posiciona ponteiro de percurso no 1o nó
+            while (atual != null) // enquanto houver nós a visitar
+            {
+                dados.Add(atual.Info);  // inclui no listbox os dados do nó visitado agora
+                atual = atual.Prox;     // avança o ponteiro de percurso para o nó seguinte
+            }
+        }
+        else
+        {
+            atual = ultimo;       // posiciona ponteiro de percurso no último nó
+            while (atual != null) // enquanto houver nós a visitar
+            {
+                dados.Add(atual.Info);  // inclui no listbox os dados do nó visitado agora
+                atual = atual.Ant;      // retrocede o ponteiro de percurso para o nó anterior
+            }
+        }
+        return dados;
+    }
+
+    public ListaDupla()
+    {
+        primeiro = ultimo = atual = null;
+        quantosNos = numeroDoNoAtual = 0;
+        primeiroAcessoDoPercurso = false;
+    }
+
+    public bool EstaVazia
+    {
+        get => primeiro == null;
+    }
+    public NoDuplo<Dado> Primeiro
+    {
+        get => primeiro;
+    }
+    public NoDuplo<Dado> Ultimo
+    {
+        get => ultimo;
+    }
+    public int QuantosNos
+    {
+        get => quantosNos;
+    }
+
+    public void InserirAntesDoInicio(Dado novoDado)
+    {
+        var novoNo = new NoDuplo<Dado>(novoDado);
+
+        if (EstaVazia)
+            ultimo = novoNo;
+
+        novoNo.Prox = primeiro;
+        primeiro = novoNo;
+        quantosNos++;
+    }
+
+    public void InserirAposFim(Dado novoDado)
+    {
+        var novoNo = new NoDuplo<Dado>(novoDado);
+
+        if (EstaVazia)
+            primeiro = novoNo;
+        else
+            ultimo.Prox = novoNo;
+
+        ultimo = novoNo;
+        quantosNos++;
+    }
+
+    public void InserirAposFim(NoDuplo<Dado> noExistente)
+    {
+        if (noExistente != null)
+        {
+            if (EstaVazia)
+                primeiro = noExistente;
+            else
+                ultimo.Prox = noExistente;
+
+            ultimo = noExistente;
+            noExistente.Prox = null;
+            quantosNos++;
+        }
+    }
+
+    public bool Existe(Dado outroProcurado)
+    {
+        //anterior = null;
+        atual = primeiro;
+
+        //	Em seguida, é verificado se a lista está vazia. Caso esteja, é
+        //	retornado false ao local de chamada, indicando que a chave não foi
+        //	encontrada, e atual e anterior ficam valendo null
+        if (EstaVazia)
+            return false;
+
+        // a lista não está vazia, possui nós
+        // dado procurado é menor que o primeiro dado da lista:
+        // portanto, dado procurado não existe
+        if (outroProcurado.CompareTo(primeiro.Info) < 0)
+            return false;
+
+        // dado procurado é maior que o último dado da lista:
+        // portanto, dado procurado não existe
+        if (outroProcurado.CompareTo(ultimo.Info) > 0)
+        {
+            // anterior = ultimo;
+            atual = null;
+            return false;
+        }
+
+        //	caso não tenha sido definido que a chave está fora dos limites de 
+        //	chaves da lista, vamos procurar no seu interior
+        //	o apontador atual indica o primeiro nó da lista e consideraremos que
+        //	ainda não achou a chave procurada nem chegamos ao final da lista
+        bool achou = false;
+        bool fim = false;
 
         //	repete os comandos abaixo enquanto não achou o RA nem chegou ao
         //	final da pesquisa
@@ -246,99 +245,100 @@ public class ListaDupla<Dado>
                 atual = atual.Prox;
             }
 
-    // por fim, caso a pesquisa tenha terminado, o apontador atual
-    // aponta o nó onde está a chave procurada, caso ela tenha sido
-    // encontrada, ou aponta o nó onde ela deveria estar para manter a
-    // ordenação da lista. O apontador anterior aponta o nó anterior
-    // ao atual
-    return achou;   // devolve o valor da variável achou, que indica
-  }
+        // por fim, caso a pesquisa tenha terminado, o apontador atual
+        // aponta o nó onde está a chave procurada, caso ela tenha sido
+        // encontrada, ou aponta o nó onde ela deveria estar para manter a
+        // ordenação da lista. O apontador anterior aponta o nó anterior
+        // ao atual
+        return achou;   // devolve o valor da variável achou, que indica
+    }
 
-  public NoDuplo<Dado> Atual { get; set; }      //eu deveria ter mudado isso, marietti? estava só get
+    public NoDuplo<Dado> Atual { get; set; }      //eu deveria ter mudado isso, marietti? estava só get
+                                                  //acredito que nao, rafinha...
 
-  public int NumeroDoNoAtual { get => numeroDoNoAtual; set => numeroDoNoAtual = value; }
+    public int NumeroDoNoAtual { get => numeroDoNoAtual; set => numeroDoNoAtual = value; }
 
-  public bool InserirEmOrdem(Dado dados)
-  {
-    if (Existe(dados))     // Existe() configura anterior e atual
-      return false;
-    
-    // aqui temos certeza de que a chave não existe
-    // guardaremos os dados no novo nó
-    if (EstaVazia)                  // se a lista está vazia, então o 	
-      InserirAntesDoInicio(dados);  // dado ficará como primeiro da lista
-    else
-        // testa se nova chave < primeira chave
-        if (/*anterior == null && */ atual != null)
-          InserirAntesDoInicio(dados); // liga novo nó antes do primeiro
+    public bool InserirEmOrdem(Dado dados)
+    {
+        if (Existe(dados))     // Existe() configura anterior e atual
+            return false;
+
+        // aqui temos certeza de que a chave não existe
+        // guardaremos os dados no novo nó
+        if (EstaVazia)                  // se a lista está vazia, então o 	
+            InserirAntesDoInicio(dados);  // dado ficará como primeiro da lista
         else
-          // testa se nova chave > última chave
-          if (/*anterior != null && */ atual == null)
+            // testa se nova chave < primeira chave
+            if (/*anterior == null && */ atual != null)
+            InserirAntesDoInicio(dados); // liga novo nó antes do primeiro
+        else
+              // testa se nova chave > última chave
+              if (/*anterior != null && */ atual == null)
             InserirAposFim(dados);
-          else
+        else
             InserirNoMeio(dados);  // insere entre os nós anterior e atual
-      
-    return true;  // conseguiu incluir pois não é repetido
-  }
 
-  private void InserirNoMeio(Dado dados)
-  {
-    // Existe() encontrou intervalo de inclusão do novo nó (entre anterior e atual)
-    NoDuplo<Dado> anterior = null;
-    var novo = new NoDuplo<Dado>(dados);
-    anterior.Prox = novo;   // liga anterior ao novo
-    novo.Prox = atual;      // e novo no atual
-
-    if (anterior == ultimo)  // se incluiu ao final da lista,
-       ultimo = novo;        // atualiza o apontador ultimo
-    quantosNos++;            // incrementa número de nós da lista     	}	
-  }
-
-  public bool Remover(Dado dadoARemover)
-  {
-    NoDuplo<Dado> anterior = null;
-    if (EstaVazia)
-      return false;
-
-    if (!Existe(dadoARemover))
-      return false;
-
-    // aqui sabemos que o nó foi encontrado e o método
-    // Existe() configurou os ponteiros atual e anterior
-    // para delimitar onde está o nó a ser removido
-
-    if (atual == primeiro)
-    {
-      primeiro = primeiro.Prox;
-      if (primeiro == null)  // removemos o único nó da lista
-        ultimo = null;
+        return true;  // conseguiu incluir pois não é repetido
     }
-    else
-      if (atual == ultimo)
-      {
-        anterior.Prox = null;   // desliga o último nó
-        ultimo = anterior;
-      }
-      else     // nó interno a ser excluido
-      {
-        anterior.Prox = atual.Prox;
-      }
 
-    quantosNos--;
-    return true;
-  }
-
-  public void GravarDados(string nomeArq)
-  {
-    var arquivo = new StreamWriter(nomeArq);
-    atual = primeiro;
-    while (atual != null) 
+    private void InserirNoMeio(Dado dados)
     {
-      arquivo.WriteLine(atual.Info.FormatoDeArquivo());
-      atual = atual.Prox;
+        // Existe() encontrou intervalo de inclusão do novo nó (entre anterior e atual)
+        NoDuplo<Dado> anterior = null;
+        var novo = new NoDuplo<Dado>(dados);
+        anterior.Prox = novo;   // liga anterior ao novo
+        novo.Prox = atual;      // e novo no atual
+
+        if (anterior == ultimo)  // se incluiu ao final da lista,
+            ultimo = novo;        // atualiza o apontador ultimo
+        quantosNos++;            // incrementa número de nós da lista     	}	
     }
-    arquivo.Close();
-  }
+
+    public bool Remover(Dado dadoARemover)
+    {
+        NoDuplo<Dado> anterior = null;
+        if (EstaVazia)
+            return false;
+
+        if (!Existe(dadoARemover))
+            return false;
+
+        // aqui sabemos que o nó foi encontrado e o método
+        // Existe() configurou os ponteiros atual e anterior
+        // para delimitar onde está o nó a ser removido
+
+        if (atual == primeiro)
+        {
+            primeiro = primeiro.Prox;
+            if (primeiro == null)  // removemos o único nó da lista
+                ultimo = null;
+        }
+        else
+          if (atual == ultimo)
+        {
+            anterior.Prox = null;   // desliga o último nó
+            ultimo = anterior;
+        }
+        else     // nó interno a ser excluido
+        {
+            anterior.Prox = atual.Prox;
+        }
+
+        quantosNos--;
+        return true;
+    }
+
+    public void GravarDados(string nomeArq)
+    {
+        var arquivo = new StreamWriter(nomeArq);
+        atual = primeiro;
+        while (atual != null)
+        {
+            arquivo.WriteLine(atual.Info.FormatoDeArquivo());
+            atual = atual.Prox;
+        }
+        arquivo.Close();
+    }
 
     internal void InserirEmOrdem(Dica dica)
     {
