@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace apListaLigada
 {
     internal class Dica : IComparable<Dica>, IRegistro,

@@ -253,8 +253,7 @@ public class ListaDupla<Dado>
         return achou;   // devolve o valor da variável achou, que indica
     }
 
-    public NoDuplo<Dado> Atual { get; set; }      //eu deveria ter mudado isso, marietti? estava só get
-                                                  //acredito que nao, rafinha...
+    public NoDuplo<Dado> Atual => atual;
 
     public int NumeroDoNoAtual { get => numeroDoNoAtual; set => numeroDoNoAtual = value; }
 
@@ -338,15 +337,5 @@ public class ListaDupla<Dado>
             atual = atual.Prox;
         }
         arquivo.Close();
-    }
-
-    internal void InserirEmOrdem(Dica dica)
-    {
-        throw new NotImplementedException();
-    }
-
-    internal void InserirEmOrdem(Palavra palavra)
-    {
-        throw new NotImplementedException();
     }
 }
